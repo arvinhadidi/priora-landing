@@ -9,6 +9,8 @@ interface EmailModalProps {
   onClose: () => void;
 }
 
+// A simple email capture modal that saves emails to a Supabase table called "waitlist".
+
 export default function EmailModal({ onClose }: EmailModalProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
